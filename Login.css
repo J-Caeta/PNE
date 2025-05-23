@@ -1,0 +1,91 @@
+@keyframes fadeIn {
+    from{ opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+body {
+    background-color: #2e5d48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    button {
+        background-color: #ce9c4c;
+        color: #2e5d48;
+        border: none;
+        padding: 12px 24px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover{
+        transform: scale(1.05);
+        background-color: #bb975d;
+    }
+   
+    label{
+        color: #ce9c4c;
+        margin-top: 10px;
+        display: block;
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    .logo{
+        width: 120px;
+        height: 120px;
+        background-image: url('../imagens/logo.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        animation: bounce 1s infinite alternate;
+        position: relative;
+        z-index: 2;
+    }
+    
+    @keyframes bounce{
+        from{ transform: translateY(5px);}
+        to{ transform: translateY(-20px);}
+    }
+
+    h1{
+        color: #ce9c4c;
+        font-size: 26px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    textarea{
+        color: yellow;
+    }
+    input{
+        display: block;
+        width: 300px;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+        background-color: #153130;
+        color: #fff;
+        box-shadow: inset 2px 2px 4px #000000
+        
+    }
+
+    #login.btn{
+        cursor: url(../imagens/Carimbo.png);
+    }
