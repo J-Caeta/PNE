@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('formLogin');
+  const botao = document.getElementById('entrar');
   const emailInput = document.getElementById('email');
 
   form.addEventListener('submit', function (e) {
