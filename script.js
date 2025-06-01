@@ -1,7 +1,22 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('formLogin');
+  const emailInput = document.getElementById('email');
 
-   botao.addEventListener('DOMContentLoaded', function () {
-       // chamando o botão pelo nome que ele tem no html
-       const botao = document.getElementById('login-btn');
-       botao.assEventListener('click', function () {
-      window.location.href = 'index2.html'; // Troque pelo destino real
-    });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o form de recarregar a página
+
+    const email = emailInput.value.trim();
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!email) {
+      alert('Por favor, preencha o campo de e-mail.');
+    } else if (!emailValido) {
+      alert('E-mail inválido. Digite um e-mail válido.');
+    } else {
+      alert('E-mail validado com sucesso!');
+      // Redireciona ou faz outra ação:
+      // window.location.href = 'dashboard.html';
+       window.location.href = 'index2.html';
+    }
+  });
+});
